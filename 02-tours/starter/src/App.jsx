@@ -12,18 +12,26 @@ const App = () => {
     try {
 
       const response = await fetch(url);
-      const toursa = await response.json();
-      console.log(toursa);
+      const tours = await response.json();
+      setTours(tours)
     } catch (error) {
       console.log(error);
     }
+    setIsLoading(false)
   }
   useEffect(() => {
     fetchTours();
 
   }, [])
 
- 
-  return <h1>hi</h1>
+  if (isLoading) {
+    return <main>
+      <Loading />
+    </main>
+  }
+  // ToDo
+  return <main>
+    <Tours tours={tours}/>
+  </main>
 };
 export default App;
