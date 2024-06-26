@@ -270,7 +270,7 @@ ul {
   max-width: 800px;
   position: relative;
   height: 450px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .slide {
   text-align: center;
@@ -341,4 +341,15 @@ ul {
 }
 .next-slide {
   transform: translateX(200%);
+}
+
+/* Slick Carousel */
+.slick-container {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  height: 450px;
+  overflow: hidden;
 }
