@@ -8,7 +8,7 @@ const Duties = ({ duties }) => {
       {duties.map((duty, index) => {
         const id = uuidv4();
         return (
-          <div key={id} className="job-desc">
+          <div className="job-desc">
             <FaAngleDoubleRight className="job-icon" />
             <p>{duty}</p>
           </div>
