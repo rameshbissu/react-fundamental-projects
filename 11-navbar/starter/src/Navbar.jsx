@@ -18,8 +18,8 @@ const Navbar = () => {
             </button>
 
             </div>
-            {showLinks &&
-            <div className="links-container">
+            
+            <div className={showLinks ? 'links-container show-container' : 'links-container'}>
                 <ul className="links">
                     {links.map((link)=>{
                         const {id,url,text} = link;
@@ -29,7 +29,7 @@ const Navbar = () => {
                     })}
                 </ul>
             </div>
-                }
+                
         </div>
         
     </nav>
