@@ -341,6 +341,10 @@ main {
   box-shadow: var(--shadow-3);
   transition: var(--transition);
   /* toggle logic */
+  transform: translateX(-100%);
+}
+.show-sidebar{
+  transform: translateX(0);
 }
 @media screen and (min-width:678px) {
   .sidebar{
