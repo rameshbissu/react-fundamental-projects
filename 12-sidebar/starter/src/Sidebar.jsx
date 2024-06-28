@@ -12,7 +12,7 @@ const Sidebar = () => {
         <img src={logo} alt="logo" className="logo" />
         <button
           type="button"
-          className="close-sidebar-btn"
+          className="close-btn"
           onClick={closeSidebar}
         >
           <FaTimes />
