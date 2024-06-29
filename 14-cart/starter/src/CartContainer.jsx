@@ -1,6 +1,9 @@
 import CartItem from './CartItem';
+import { useGlobalContext } from './context';
 import cartItems from './data';
 const CartContainer = () => {
+  const {greeting} = useGlobalContext();
+  console.log(greeting);
   const cartArray = [...cartItems];
 
   if (cartArray.length === 0) {
