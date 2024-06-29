@@ -16,7 +16,7 @@ const url = 'https://www.course-api.com/react-useReducer-cart-project'
 const AppContext = createContext();
 
 const initialState = {
-  loading: true,
+  loading: false,
   cart: new Map(cartItems.map((item) => [item.id, item])),
 };
 
@@ -40,9 +40,11 @@ export const AppProvider = ({ children }) => {
 
 
   const fetchData = async() =>{
+    dispatch({type : LOADING})
     const response = await fetch(url)
     const cart = await response.json();
     console.log(cart);
+    dispatch({type : DISPLAY_ITEMS,payload:{cart}})
   }
   useEffect(() =>{
     fetchData();
